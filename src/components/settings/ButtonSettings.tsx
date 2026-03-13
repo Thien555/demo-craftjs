@@ -2,6 +2,7 @@
 
 import { useNode } from "@craftjs/core";
 
+// Interface định nghĩa props (trùng với Button.tsx)
 interface ButtonProps {
   text: string;
   backgroundColor: string;
@@ -10,6 +11,9 @@ interface ButtonProps {
   padding: string;
 }
 
+/**
+ * ButtonSettings: Component form để chỉnh sửa properties của Button component
+ */
 export const ButtonSettings = () => {
   const {
     actions: { setProp },
@@ -20,6 +24,7 @@ export const ButtonSettings = () => {
 
   return (
     <div className="space-y-4 p-4">
+      {/* Button Text field */}
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">
           Button Text
@@ -34,6 +39,7 @@ export const ButtonSettings = () => {
         />
       </div>
 
+      {/* Background Color field */}
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">
           Background Color
@@ -50,6 +56,7 @@ export const ButtonSettings = () => {
         />
       </div>
 
+      {/* Text Color field */}
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">
           Text Color
@@ -64,6 +71,7 @@ export const ButtonSettings = () => {
         />
       </div>
 
+      {/* Border Radius field */}
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">
           Border Radius
@@ -81,6 +89,7 @@ export const ButtonSettings = () => {
         />
       </div>
 
+      {/* Padding field */}
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">
           Padding

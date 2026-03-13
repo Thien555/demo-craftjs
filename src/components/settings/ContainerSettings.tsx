@@ -2,11 +2,15 @@
 
 import { useNode } from "@craftjs/core";
 
+// Interface định nghĩa props (trùng với Container.tsx)
 interface ContainerProps {
   backgroundColor: string;
   padding: string;
 }
 
+/**
+ * ContainerSettings: Component form để chỉnh sửa properties của Container component
+ */
 export const ContainerSettings = () => {
   const {
     actions: { setProp },
@@ -17,6 +21,7 @@ export const ContainerSettings = () => {
 
   return (
     <div className="space-y-4 p-4">
+      {/* Background Color field */}
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">
           Background Color
@@ -34,6 +39,7 @@ export const ContainerSettings = () => {
         />
       </div>
 
+      {/* Padding field */}
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">
           Padding
